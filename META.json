@@ -1,0 +1,55 @@
+{
+   "abstract" : "Build a Build.PL that uses Module::Build::Tiny",
+   "author" : [
+      "Leon Timmermans <fawaka@gmail.com>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 4.200006, CPAN::Meta::Converter version 2.110580",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Dist-Zilla-Plugin-ModuleBuildTiny",
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "Module::Build::Tiny" : "0.006"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Dist::Zilla" : "4.200006",
+            "Dist::Zilla::File::InMemory" : 0,
+            "Dist::Zilla::Role::BuildPL" : 0,
+            "Dist::Zilla::Role::PrereqSource" : 0,
+            "Dist::Zilla::Role::TextTemplate" : 0,
+            "Moose" : 0,
+            "perl" : "5.006"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "File::Find" : 0,
+            "File::Temp" : 0,
+            "Test::More" : 0
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "mailto" : "bug-dist-zilla-plugin-modulebuildtiny at rt.cpan.org",
+         "web" : "http://rt.cpan.org/Public/Dist/Display.html?Name=Dist-Zilla-Plugin-ModuleBuildTiny"
+      },
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/Leont/dist-zilla-plugin-modulebuildtiny.git",
+         "web" : "http://github.com/Leont/dist-zilla-plugin-modulebuildtiny"
+      }
+   },
+   "version" : "0.001"
+}
+
