@@ -16,7 +16,7 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "Module::Build::Tiny" : "0.006"
+            "Module::Build::Tiny" : "0.007"
          }
       },
       "runtime" : {
@@ -50,6 +50,6 @@
          "web" : "http://github.com/Leont/dist-zilla-plugin-modulebuildtiny"
       }
    },
-   "version" : "0.001"
+   "version" : "0.002"
 }
 

@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::ModuleBuildTiny;
 BEGIN {
-  $Dist::Zilla::Plugin::ModuleBuildTiny::VERSION = '0.001';
+  $Dist::Zilla::Plugin::ModuleBuildTiny::VERSION = '0.002';
 }
 
 use Moose;
@@ -11,7 +11,7 @@ use Dist::Zilla::File::InMemory;
 has version => (
 	isa => 'Str',
 	is  => 'rw',
-	default => '0.006',
+	default => '0.007',
 );
 
 my $template = "use Module::Build::Tiny {{ \$version }};\nBuild_PL();\n";
@@ -50,7 +50,7 @@ Dist::Zilla::Plugin::ModuleBuildTiny - Build a Build.PL that uses Module::Build:
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 DESCRIPTION
 
@@ -62,7 +62,7 @@ This plugin will create a F<Build.PL> for installing the dist using L<Module::Bu
 
 B<Optional:> Specify the minimum version of L<Module::Build::Tiny> to depend on.
 
-Defaults to 0.006
+Defaults to 0.007
 
 =for Pod::Coverage .
 =end

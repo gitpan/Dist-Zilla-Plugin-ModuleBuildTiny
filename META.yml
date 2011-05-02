@@ -7,7 +7,7 @@ build_requires:
   File::Temp: 0
   Test::More: 0
 configure_requires:
-  Module::Build::Tiny: 0.006
+  Module::Build::Tiny: 0.007
 dynamic_config: 0
 generated_by: 'Dist::Zilla version 4.200006, CPAN::Meta::Converter version 2.110580'
 license: perl
@@ -26,4 +26,4 @@ requires:
 resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Dist-Zilla-Plugin-ModuleBuildTiny
   repository: git://github.com/Leont/dist-zilla-plugin-modulebuildtiny.git
-version: 0.001
+version: 0.002

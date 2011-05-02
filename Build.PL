@@ -1,2 +1,2 @@
-use Module::Build::Tiny 0.006;
+use Module::Build::Tiny 0.007;
 Build_PL();
