@@ -1,17 +1,24 @@
 package Dist::Zilla::Plugin::ModuleBuildTiny;
-BEGIN {
-  $Dist::Zilla::Plugin::ModuleBuildTiny::VERSION = '0.002';
+{
+  $Dist::Zilla::Plugin::ModuleBuildTiny::VERSION = '0.003';
 }
 
 use Moose;
 with qw/Dist::Zilla::Role::BuildPL Dist::Zilla::Role::TextTemplate Dist::Zilla::Role::PrereqSource/;
+use Module::Metadata;
 
 use Dist::Zilla::File::InMemory;
 
+use version;
+use MooseX::Types::Perl qw(VersionObject);
+
 has version => (
-	isa => 'Str',
 	is  => 'rw',
-	default => '0.007',
+	isa => VersionObject,
+	default => sub {
+		return Module::Metadata->new_from_module('Module::Build::Tiny')->version;
+	},
+	coerce => 1,
 );
 
 my $template = "use Module::Build::Tiny {{ \$version }};\nBuild_PL();\n";
@@ -42,6 +49,7 @@ no Moose;
 
 
 
+__END__
 =pod
 
 =head1 NAME
@@ -50,7 +58,7 @@ Dist::Zilla::Plugin::ModuleBuildTiny - Build a Build.PL that uses Module::Build:
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 DESCRIPTION
 
@@ -62,10 +70,7 @@ This plugin will create a F<Build.PL> for installing the dist using L<Module::Bu
 
 B<Optional:> Specify the minimum version of L<Module::Build::Tiny> to depend on.
 
-Defaults to 0.007
-
-=for Pod::Coverage .
-=end
+Defaults to the version installed on the author's perl installation
 
 =head1 AUTHOR
 
@@ -79,8 +84,4 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
-
-__END__
-
 
