@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::ModuleBuildTiny;
 {
-  $Dist::Zilla::Plugin::ModuleBuildTiny::VERSION = '0.004';
+  $Dist::Zilla::Plugin::ModuleBuildTiny::VERSION = '0.005';
 }
 
 use Moose;
@@ -41,6 +41,7 @@ sub register_prereqs {
 sub setup_installer {
 	my ($self, $arg) = @_;
 
+	confess "Module::Build::Tiny is currently incompatible with dynamic_config" if $self->zilla->distmeta->{dynamic_config};
 	my $content = $self->fill_in_string($template, { version => $self->version, minimum_perl => $self->minimum_perl });
 	my $file = Dist::Zilla::File::InMemory->new({ name => 'Build.PL', content => $content });
 	$self->add_file($file);
@@ -54,9 +55,8 @@ no Moose;
 
 # ABSTRACT: Build a Build.PL that uses Module::Build::Tiny
 
-
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -65,7 +65,7 @@ Dist::Zilla::Plugin::ModuleBuildTiny - Build a Build.PL that uses Module::Build:
 
 =head1 VERSION
 
-version 0.004
+version 0.005
 
 =head1 DESCRIPTION
 
@@ -97,4 +97,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

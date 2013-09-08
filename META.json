@@ -4,7 +4,7 @@
       "Leon Timmermans <fawaka@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300031, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Zilla version 4.300035, CPAN::Meta::Converter version 2.132140",
    "license" : [
       "perl_5"
    ],
@@ -16,7 +16,7 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "Module::Build::Tiny" : "0.007"
+            "Module::Build::Tiny" : "0.026"
          }
       },
       "develop" : {
@@ -30,7 +30,6 @@
             "Dist::Zilla::Role::BuildPL" : "0",
             "Dist::Zilla::Role::PrereqSource" : "0",
             "Dist::Zilla::Role::TextTemplate" : "0",
-            "Module::Build::Tiny" : "0.011",
             "Module::Metadata" : "0",
             "Moose" : "0",
             "MooseX::Types::Moose" : "0",
@@ -56,9 +55,9 @@
       "repository" : {
          "type" : "git",
          "url" : "git://github.com/Leont/dist-zilla-plugin-modulebuildtiny.git",
-         "web" : "http://github.com/Leont/dist-zilla-plugin-modulebuildtiny"
+         "web" : "https://github.com/Leont/dist-zilla-plugin-modulebuildtiny"
       }
    },
-   "version" : "0.004"
+   "version" : "0.005"
 }
 
