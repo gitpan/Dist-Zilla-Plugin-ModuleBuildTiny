@@ -3,38 +3,39 @@ abstract: 'Build a Build.PL that uses Module::Build::Tiny'
 author:
   - 'Leon Timmermans <fawaka@gmail.com>'
 build_requires:
-  CPAN::Meta: 0
-  File::Spec: 0
-  IO::Handle: 0
-  IPC::Open3: 0
-  Test::DZil: 0
-  Test::Fatal: 0
-  Test::More: 0
-  strict: 0
-  warnings: 0
+  CPAN::Meta: '0'
+  File::Spec: '0'
+  IO::Handle: '0'
+  IPC::Open3: '0'
+  Test::DZil: '0'
+  Test::Fatal: '0'
+  Test::More: '0'
+  perl: '5.006'
+  strict: '0'
+  warnings: '0'
 configure_requires:
-  Module::Build::Tiny: 0.030
+  Module::Build::Tiny: '0.037'
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 5.009, CPAN::Meta::Converter version 2.132830'
+generated_by: 'Dist::Zilla version 5.019, CPAN::Meta::Converter version 2.142060'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
-  version: 1.4
+  version: '1.4'
 name: Dist-Zilla-Plugin-ModuleBuildTiny
 provides:
   Dist::Zilla::Plugin::ModuleBuildTiny:
     file: lib/Dist/Zilla/Plugin/ModuleBuildTiny.pm
-    version: 0.006
+    version: '0.007'
 requires:
-  Dist::Zilla::File::InMemory: 0
-  Dist::Zilla::Role::BuildPL: 0
-  Dist::Zilla::Role::PrereqSource: 0
-  Dist::Zilla::Role::TextTemplate: 0
-  Module::Metadata: 0
-  Moose: 0
-  MooseX::Types::Moose: 0
-  perl: 5.006
+  Dist::Zilla::File::InMemory: '0'
+  Dist::Zilla::Role::BuildPL: '0'
+  Dist::Zilla::Role::PrereqSource: '0'
+  Dist::Zilla::Role::TextTemplate: '0'
+  Module::Metadata: '0'
+  Moose: '0'
+  MooseX::Types::Perl: '0'
+  perl: '5.006'
 resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Dist-Zilla-Plugin-ModuleBuildTiny
   repository: git://github.com/Leont/dist-zilla-plugin-modulebuildtiny.git
-version: 0.006
+version: '0.007'
